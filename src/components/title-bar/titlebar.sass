@@ -1,0 +1,81 @@
+$title_bar_height: calc(env(titlebar-area-height) + 1px)
+$logo_size: $title_bar_height
+$logo_img_size: 65%
+
+// 标题栏
+.title-bar
+    --option-font-color: var(--color-text-4)
+    --option-item-hover-color: var(--color-fill-4)
+
+    display: flex
+    align-items: center
+    height: $title_bar_height
+    -webkit-app-region: drag
+    background-color: var(--title-bar-color)
+    color: var(--color-text-4)
+    padding-left: 0.5rem
+
+    // logo 样式
+    .title-bar__logo
+        height: $logo_size
+        width: $logo_size
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        img
+            height: $logo_img_size
+            width: $logo_img_size
+
+    //操作栏
+    .title-bar__options
+        display: flex
+        font-size: 0.8rem
+        margin-left: 0.2rem
+        font-weight: 500
+        color: var(--color-text-2)
+
+        .option-item
+            outline-style: none
+            border: none
+            background: none
+            -webkit-app-region: no-drag
+            -webkit-user-select: none
+            padding: 2px 5px
+            border-radius: var(--border-radius-small)
+            min-width: 50px
+            text-align: center
+
+            &:not(:first-child)
+                margin-left: 0.5rem
+            &:hover
+                background-color: var(--color-fill-4)
+                color: var(--color-text-1)
+
+            .options-list
+                position: relative
+
+// 选项
+.option-item__options
+    position: relative
+    border: 1px solid var(--color-neutral-6)
+    border-radius: var(--border-radius-medium)
+    box-shadow: var(--shadow1-center)
+    background-color: var(--color-bg-1)
+    margin-top: 5px
+    left: 0
+    padding: 0.4rem
+    font-size: 0.8rem
+
+    &> div
+        outline-style: none
+        display: flex
+        justify-content: space-between
+        cursor: pointer
+        padding: 0.3rem 0.2rem
+        min-width: 10rem
+        border-radius: var(--border-radius-medium)
+        padding-left: 1.5rem
+        &:hover
+            background-color: rgb(var(--arcoblue-1))
+            &> div:not(:first-child)
+                margin-top: 1px

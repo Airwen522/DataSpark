@@ -1,0 +1,44 @@
+.s-input
+    border-radius: var(--border-radius-medium)
+    outline-style: none
+    border: none
+    transition: all 0.25s
+    color: var(--color-text-1)
+    display: block
+    width: 100%
+    box-sizing: border-box
+
+.s-input-status-default
+    background-color: var(--color-fill-2)
+    &:focus
+        background-color: var(--color-fill-3)
+
+.s-input-status-success
+    background-color: var(--color-success-2)
+    &:focus
+        background-color: var(--color-success-3)
+
+.s-input-status-warning
+    background-color: var(--color-warning-2)
+    &:focus
+        background-color: var(--color-warning-3)
+
+.s-input-status-error
+    background-color: var(--color-danger-2)
+    &:focus
+        background-color: var(--color-danger-3)
+
+.s-input-size-small
+    padding: 3px 5px
+    font-size: 0.8rem
+.s-input-size-default
+    padding: 10px 10px
+    font-size: 0.8rem
+.s-input-size-large
+    padding: 7px 12px
+    font-size: 1.2rem
+    border-radius: var(--border-radius-large)
+.s-input-size-extra
+    padding: 7px 12px
+    font-size: 1.4rem
+    border-radius: var(--border-radius-large)
